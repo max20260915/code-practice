@@ -67,3 +67,9 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# C编译产物
+*.exe
+*.o
+*.out
+*.log
