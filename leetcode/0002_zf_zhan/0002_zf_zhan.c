@@ -44,7 +44,7 @@ bool isValid(char * s){
 
 int main(void)
 {
-    char s1[] = "(}[]";
+    char s1[] = "{()}}";
     printf("%d\n", isValid(s1));
     return 0;
 }
