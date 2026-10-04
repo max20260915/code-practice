@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include <stdib.h>
+#include <stdlib.h>
 
-struct treenode{
+struct TreeNode{
     int val;
-    struct treenode *left;
-    struct treenode *right;
+    struct TreeNode *left;
+    struct TreeNode *right;
 };
-void inorder(struct treenode* root, int* res, int* ressize){
+void inorder(struct TreeNode* root, int* res, int* ressize){
     if(!root){
         return;
     }
@@ -14,7 +14,7 @@ void inorder(struct treenode* root, int* res, int* ressize){
     res[(*ressize)++]=root->val;
     inorder(root->right,res,ressize);
 }
-int* inordertraversal(struct treenode* root, int* returnsize){
+int* inorderTraversal(struct TreeNode* root, int* returnsize){
     int* res = malloc(sizeof(int)*501);
     *returnsize = 0;
     inorder(root,res,returnsize);
