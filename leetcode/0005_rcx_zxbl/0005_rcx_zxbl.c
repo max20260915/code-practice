@@ -23,5 +23,21 @@ int* inordertraversal(struct treenode* root, int* returnsize){
 
     int main(void)
 {
-    return
+    struct TreeNode n1 = {1, NULL, NULL};
+    struct TreeNode n3 = {3, NULL, NULL};
+    struct TreeNode n2 = {2, &n3, NULL};
+    n1.right = &n2;
+
+    int size;
+    int* result = inorderTraversal(&n1, &size);
+
+    printf("中序遍历结果：");
+    for(int i = 0; i < size; i++)
+    {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
+
+    free(result);
+    return 0;
 }
