@@ -15,5 +15,13 @@ int maxDepth(struct TreeNode* root){
     int rightDepth = maxDepth(root->right);
     return 1 +(leftDepth > rightDepth ? leftDepth : rightDepth );
 }
+struct TreeNode*createNode(int val)
+{
+   struct TreeNode* node = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+   node->val = val;
+   node->left = NULL;
+   node->right = NULL;
+   return node;
 
+}
 
