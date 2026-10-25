@@ -4,12 +4,22 @@
 struct ListNode{
     int val;
     struct ListNode *next;
-}
-struct ListNode *getIntersectioNode(struct ListNode *headA,struct ListNode *headB){
+};
+struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
    if(headA == NULL || headB == NULL){
     return NULL;
    }
    struct ListNode *pA =headA;
    struct ListNode *pB =headB;
-   while()
+   while(pA != pB){
+    pA = (pA == NULL)?headB:pA->next;
+    pB = (pB == NULL)?headA:pB->next;
+   }
+   return pA;
+}
+struct ListNode* newNode(int val){
+    struct ListNode* node = (struct ListNode*)malloc(sizeof(struct ListNode));
+    node->val = val;
+    node->next = NULL;
+    return node;
 }
