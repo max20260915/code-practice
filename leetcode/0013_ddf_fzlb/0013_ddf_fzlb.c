@@ -9,7 +9,7 @@ void printList(struct ListNode* head);
 struct ListNode* reverseList(struct ListNode* head){
     struct ListNode* prev = NULL;
     struct ListNode* cur = head;
-    struct ListNode* next;
+    struct ListNode *next;
     while(cur != NULL)
     {
         next = cur->next;
@@ -25,6 +25,16 @@ struct ListNode* newNode(int val)
     node->val = val;
     node->next = NULL;
     return node;
+}
+void printList(struct ListNode* head)
+{
+    struct ListNode* p = head;
+    while(p != NULL)
+    {
+        printf("%d ", p->val);
+        p = p->next;
+    }
+    printf("\n");
 }
 
 int main(void)
