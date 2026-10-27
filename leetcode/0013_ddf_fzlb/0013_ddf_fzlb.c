@@ -4,6 +4,8 @@ struct ListNode{
     int val;
     struct ListNode *next;
 };
+struct ListNode* newNode(int val);
+void printList(struct ListNode* head);
 struct ListNode* reverseList(struct ListNode* head){
     struct ListNode* prev = NULL;
     struct ListNode* cur = head;
@@ -38,10 +40,10 @@ int main(void)
     n3->next = n4;
     n4->next = n5;
 
-    printf("原链表：");
+    printf("");
     printList(n1);
     struct ListNode* newHead = reverseList(n1);
-    printf("反转后：");
+    printf("");
     printList(newHead);
     return 0;
 }
