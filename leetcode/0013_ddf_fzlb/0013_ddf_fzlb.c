@@ -15,16 +15,15 @@ struct ListNode* reverseList(struct ListNode* head){
         prev = cur;
         cur = next;
     }
+    return prev;
 }
-
-
-
-
-
-
-
-
-
+struct ListNode* newNode(int val)
+{
+    struct ListNode* node = (struct ListNode*)malloc(sizeof(struct ListNode));
+    node->val = val;
+    node->next = NULL;
+    return node;
+}
 
 int main(void)
 {
