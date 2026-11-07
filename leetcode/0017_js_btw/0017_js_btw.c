@@ -11,7 +11,18 @@ int* countBits(int n,int* returnSize){
     }
     return ans;
 }
-
+int main(void)
+{
+    int n = 5;
+    int len;
+    int *res = countBits(n, &len);
+    for(int i = 0; i < len; i++)
+    {
+        printf("%d ", res[i]);
+    }
+    free(res);
+    return 0;
+}
 
 
 
