@@ -12,12 +12,24 @@ int* findDisappearedNumbers(int* nums,int numsSize, int* returnSize){
             nums[x -1] = -nums[x -1];
         }
     }
+int cnt = 0;
+for(int i = 0;i < numsSize;i++)
+{
+    if(nums[i]>0)
+    cnt++;
 }
-
-
-
-
-
+int *res = (int *)malloc(sizeof(int) * cnt);
+int idx = 0;
+for(int i =0;i < numsSize;i++)
+{
+    if(nums[i]>0)
+    {
+        res[idx++] = i+1;
+    }
+}
+    *returnSize = cnt;
+    return res;
+}
 
 int main(void)
 {
