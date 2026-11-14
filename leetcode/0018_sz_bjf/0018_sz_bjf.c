@@ -16,7 +16,9 @@ int cnt = 0;
 for(int i = 0;i < numsSize;i++)
 {
     if(nums[i]>0)
+    {
     cnt++;
+    }
 }
 int *res = (int *)malloc(sizeof(int) * cnt);
 int idx = 0;
